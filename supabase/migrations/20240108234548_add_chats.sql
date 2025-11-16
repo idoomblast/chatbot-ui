@@ -4,7 +4,7 @@
 
 CREATE TABLE IF NOT EXISTS chats (
     -- ID
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT extensions.uuid_generate_v4(),
 
     -- REQUIRED RELATIONSHIPS
     user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
